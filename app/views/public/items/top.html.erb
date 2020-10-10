@@ -1,2 +1,32 @@
-<h1>Public::Items#top</h1>
-<p>Find me in app/views/public/items/top.html.erb</p>
+<div class="mv">
+	<div class="main-visual-text" >
+		<p>ONEGAI-PROTAIN</p>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 public items_top">
+			<h2 class="section-top">ジャンル一覧</h2>
+			<% @genres.each do |genre| %>
+				<%= link_to genre.name, items_path(genre_id: genre.id) %>
+			<% end %>
+		 </div>
+		<h2 class="section-top">PICK UP</h2>
+		<div class="items">
+			<% @items.each do |item| %>
+				<div class="col-xs-3 public items_top">
+					<%= link_to item_path(item) do %>
+						<%= attachment_image_tag item, :image, :fill, 200, 200,format: "jpeg", fallback: "no-image.png" ,size:"200x200"%>
+						<h5><%= item.genre.name %></h5>
+						<p><%= item.name %></p>
+						<p><%= item.with_tax_price %>円</p>
+					<% end %>
+	            </div>
+		    <% end %>
+		</div>
+	</div>
+	<div class="row readmore text-right">
+		<p><%= link_to "Read more▶️", items_path %></p>
+	</div>
+</div>
+
