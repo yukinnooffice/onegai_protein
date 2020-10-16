@@ -23,14 +23,51 @@
 }
 
 
+
+#img_prev{
+　border-radius:100px;
+　border:5px solid #F90;
+　width:200px;
+　overflow:hidden;
+　box-shadow:0 0 4px #666666;
+}
+.image_field {
+  width: 220px;
+  text-align: center;
+  p {
+    margin-top: 10px;
+    text-align: left;
+  }
+}
+.admin_item_image {
+  width: 220px;
+  height: 150px;
+
+  object-fit: cover;
+}
+.item_image {
+  display: block;
+  width: 360px;
+  height: 240px;
+
+  object-fit: cover;
+}
+
+
 // header　--------------------------------------------
+.toplogo{
+
+}
+
 header{
   text-decoration: none;
-  background-color: rgba(99, 194, 191, 1);
   height: 50px;
   font-family: Oswald,sans-serif;
   font-weight: 700;
+  background-color: rgba(30,59,140,.9);
+  border-bottom: rgba(150,245,80,.8) .222em solid;
 }
+
 header li {
   list-style: none;
 }

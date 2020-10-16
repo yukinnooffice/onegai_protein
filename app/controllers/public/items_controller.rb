@@ -1,7 +1,7 @@
 class Public::ItemsController < ApplicationController
   def top
     @genres = Genre.only_active.includes(:items)
-    @items = Item.recommended
+    @items = Item.all
   end
 
   def index
@@ -21,4 +21,8 @@ class Public::ItemsController < ApplicationController
     @genres = Genre.only_active
     @cart_item = CartItem.new
   end
+
+  def  about
+  end
 end
+
