@@ -1,32 +1,67 @@
-<div class="mv">
-	<div class="main-visual-text" >
-		<p>ONEGAI-PROTAIN</p>
-	</div>
+
+
+<div id="skippr">
+  	<div id="theTarget">
+	    <div class="image1">
+	   	    <div class="mv">
+				<div class="main-visual-text" >
+					<p>筋肉に、願いを。</p>
+				</div>
+	   		</div>
+	    </div>
+	    <div class="image2">
+	    	<div class="mv">
+				<div class="main-visual-text" >
+					<p>健康に、願いを。</p>
+				</div>
+	   		</div>
+	    </div>
+	    <div class="image3">
+	    	<div class="mv">
+				<div class="main-visual-text" >
+					<p>人生に、願いを。</p>
+				</div>
+	   		</div>
+	    </div>
+	    <div class="image4">
+	        <div class="mv">
+				<div class="main-visual-text" >
+					<p>Wish for protein<br>
+					プロテインに、願いを。</p>
+				</div>
+	   		</div>
+	    </div>
+  	</div>
 </div>
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12 public items_top">
-			<h2 class="section-top">ジャンル一覧</h2>
-			<% @genres.each do |genre| %>
-				<%= link_to genre.name, items_path(genre_id: genre.id) %>
-			<% end %>
-		 </div>
-		<h2 class="section-top">PICK UP</h2>
-		<div class="items">
-			<% @items.each do |item| %>
-				<div class="col-xs-3 public items_top">
-					<%= link_to item_path(item) do %>
-						<%= attachment_image_tag item, :image, :fill, 200, 200,format: "jpeg", fallback: "no-image.png" ,size:"200x200"%>
-						<h5><%= item.genre.name %></h5>
-						<p><%= item.name %></p>
-						<p><%= item.with_tax_price %>円</p>
-					<% end %>
-	            </div>
-		    <% end %>
-		</div>
-	</div>
+
+
+<div class="row item-info">
+	<h3>PRODUCTS LINEUP</h3>
+	<p>商品ラインナップ</p>
+</div>
+
+<div class="f-container">
+	<% @genres.each do |genre| %>
+	    <%= link_to items_path(genre_id: genre.id) do %>
+			<div class="f-item public_items_genre"><%= genre.name%></div>
+		<% end %>
+	<% end %>
+</div>
+
+
+
 	<div class="row readmore text-right">
 		<p><%= link_to "Read more▶️", items_path %></p>
 	</div>
+
+<div class="f-container">
+	<div class=" item_image1"><img src="https://user-images.githubusercontent.com/68215378/96173209-7dfee300-0f62-11eb-8295-47c469e8aef7.jpg"></div>
+	<div class=" item_image2"><img src="https://user-images.githubusercontent.com/68215378/96234532-87c12e80-0fd4-11eb-9e88-f65f5dc04abf.jpg"></div>
+	<div class=" item_image3"><img src="https://user-images.githubusercontent.com/68215378/96245595-71ba6a80-0fe2-11eb-8d8d-afcd08cd4703.jpg"></div>
+	<div class=" item_image4"><img src="https://user-images.githubusercontent.com/68215378/96251740-dc23d880-0feb-11eb-9bdc-621e95ff5170.jpg"></div>
+</div>
+
+<div class="container c">
+商品カテゴリ
 </div>
 
