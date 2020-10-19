@@ -70,3 +70,7 @@ gem 'kaminari','~> 1.2.1'
 gem "pry-byebug"
 gem 'rails-i18n'
 gem 'enum_help'
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
