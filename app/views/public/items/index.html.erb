@@ -1,15 +1,18 @@
 <div class="container">
+  	<div class="row item-info">
+		<h3>PRODUCTS LINEUP</h3>
+		<p>商品ラインナップ</p>
+	</div>
+	<div class="f-container">
+		<% @genres.each do |genre| %>
+		    <%= link_to items_path(genre_id: genre.id) do %>
+				<div class="f-item public_items_genre"><%= genre.name%></div>
+			<% end %>
+		<% end %>
+	</div>
 	<div class="row">
 	  <div class="col-xs-12 public items_index">
-			<h2 class="section-top"></h2>
-			  <% @genres.each do |genre| %>
-				  <%= link_to genre.name, items_path(genre_id: genre.id) %>
-			  <% end %>
-		</div>
-  </div>
-	<div class="row">
-	  <div class="col-xs-12 public items_index">
-	  	
+
 			<% if params[:genre_id] %>
 				<h2 class="section-top"><%= @genre.name %>の商品一覧 (全<%= @all_items_count %>件)</h2>
 			<% else %>
