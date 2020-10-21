@@ -56,16 +56,22 @@
               <li class="nav-item nav-link"><%= link_to '商品一覧', items_path %></li>
               <li class="nav-item nav-link"><%= link_to '新規登録', new_customer_registration_path %></li>
               <li class="nav-item nav-link"><%= link_to 'ログイン', new_customer_session_path %></li>
-                            <li><%= link_to '', new_admin_session_path %></li>
-
+              <li class="nav-item nav-link"><%= link_to 'ゲストログイン（閲覧用）', guests_guest_sign_in_path, method: :post %></li>
+              <li class="nav-item nav-link"><%= link_to 'ゲストログイン（管理者用）', admin_admin_guest_sign_in_path, method: :post %></li>
             </ul>
         </div>
       </header>
     <% end %>
     <main>
+   <% if flash[:notice] %>
+
+   
+ <div class="notice"><%= notice %></div>
+    <% end %>
+
       <%= yield %>
     </main>
-    <footer>
+    <footer class="f-container">
       <div class="container">Copyright © おねがいプロテイン Inc. All Rights Reserved.
       </div>
     </footer>
