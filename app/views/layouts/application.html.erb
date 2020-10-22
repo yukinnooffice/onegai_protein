@@ -10,6 +10,7 @@
   </head>
 
   <body>
+
     <h2 style="color:#007bff; text-align: center;">ONEGAI-PROTAIN</h2>
     <% if admin_signed_in? %>
       <header class="admin_header">
@@ -24,12 +25,6 @@
               <li><%= link_to 'ジャンル管理', admin_genres_path %></li>
               <li><%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %></li>
             </ul>
-            <%= form_tag(admin_search_path, method: :get) do %>
-              <%= text_field_tag "search[content]", "", :placeholder =>"会員: 姓,名,セイ,メイ / 商品: 商品名" %>
-              <%= select_tag "search[model]", options_for_select({ "会員" => "customer", "商品" => "item" }) %>
-              <%= select_tag "search[method]", options_for_select({ "部分一致" => "partial", "前方一致" => "forward", "後方一致" => "backward", "完全一致" => "perfect" }) %>
-              <%= submit_tag '検索', class: "btn btn-primary" %>
-            <% end %>
         </div>
       </header>
     <% elsif customer_signed_in? %>
@@ -53,6 +48,8 @@
             <li class="nav-item nav-link"><%= link_to 'おねがいプロテイン', root_path, class: "logo" %></li>
           </ul>
             <ul class="nav navbar-nav navbar-right">
+                  <li class="nav-item nav-link"><button  class="fas fa-search" data-toggle="modal" data-target="#sampleModal">serch
+</button></li>
               <li class="nav-item nav-link"><%= link_to '商品一覧', items_path %></li>
               <li class="nav-item nav-link"><%= link_to '新規登録', new_customer_registration_path %></li>
               <li class="nav-item nav-link"><%= link_to 'ログイン', new_customer_session_path %></li>
@@ -74,6 +71,32 @@
     <footer class="f-container">
       <div class="container">Copyright © おねがいプロテイン Inc. All Rights Reserved.
       </div>
+
     </footer>
   </body>
+
+
+<!-- モーダル・ダイアログ -->
+<div class="modal fade" id="sampleModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+        <h4 class="modal-title">タイトル</h4>
+      </div>
+      <div class="modal-body">
+      <%= form_tag(admin_search_path, method: :get) do %>
+              <%= text_field_tag "search[content]", "", :placeholder =>"会員: 姓,名,セイ,メイ / 商品: 商品名" , class: "search"%>
+              <%= select_tag "search[model]", options_for_select({ "会員" => "customer", "商品" => "item" }) %>
+              <%= select_tag "search[method]", options_for_select({ "部分一致" => "partial", "前方一致" => "forward", "後方一致" => "backward", "完全一致" => "perfect" }) , class: "search"%>
+              <%= submit_tag '検索', class: "btn btn-primary" %>
+            <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+        <button type="button" class="btn btn-primary">ボタン</button>
+      </div>
+    </div>
+  </div>
+</div>
 </html>

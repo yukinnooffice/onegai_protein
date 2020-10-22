@@ -21,7 +21,7 @@
 							<% item = cart_item.item %>
 							<tr>
 								<td>
-									<%= attachment_image_tag item, :image,:fill, 50, 50, format: "jpeg", fallback: "no-image.png", class: "cart_item_image" %>
+									<%= attachment_image_tag item, :image, :fill, 100, 100, format: "jpeg", size:"100x100", fallback: "no-image.png" %>
 								</td>
 								<td><%= link_to item.name, item_path(item) %></td>
 								<td class="text-right"><%= item.with_tax_price %>円</td>

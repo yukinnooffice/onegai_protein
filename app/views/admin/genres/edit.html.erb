@@ -1,8 +1,4 @@
-<div class="container">
-	<div class="row">
-	  <div class="col-xs-12 admins customers_index">
-		<h2 class="section-top">ジャンル新規登録</h2>
-	  	<%= render 'form', genre: @genre, url: admin_genre_path(@genre), submit: '更新' %>
-		</div>
-	</div>
+<div class="wrapper">
+	<h2 class="section-top">ジャンル編集</h2>
+	<%= render 'form', genre: @genre, url: admin_genre_path(@genre), submit: '更新' %>
 </div>
