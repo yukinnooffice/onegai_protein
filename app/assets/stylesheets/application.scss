@@ -81,6 +81,12 @@
   padding: 20px;
 }
 
+.section-top{
+ text-align:center;
+}
+.field{
+  text-align:center;
+}
 
 
 //サブミットボタンのデザインーーーーーーーーーーーーーー
@@ -119,7 +125,7 @@
 }
 
 //formのデザインーーーーーーーーーーーーーー
-input[type=text], input[type=email], input[type=password] {
+input[type=text]:not(.search), input[type=email], input[type=password] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -209,3 +215,9 @@ footer{
     border: 2px solid #2196F3;
     padding:12px; font-weight:850;
   }
+
+.fa-search{
+ font-size:20px;
+}
+
+
