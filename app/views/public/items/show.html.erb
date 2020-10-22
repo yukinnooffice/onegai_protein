@@ -1,17 +1,20 @@
 <div class="container">
 	<div class="row">
-		<div class="col-xs-12 public items_show">
-			<h2 class="section-top">ジャンル一覧</h2>
+		<div class="f-container">
 			<% @genres.each do |genre| %>
-				<%= link_to genre.name, items_path(genre_id: genre.id) %>
+			    <%= link_to items_path(genre_id: genre.id) do %>
+					<div class="f-item public_items_genre"><%= genre.name%></div>
+				<% end %>
 			<% end %>
 		</div>
 		<div class="col-xs-6 public items_show">
-			<h2 class="section-top"><%= @item.name %></h2>
-			<%= render 'layouts/error_messages', resource: @cart_item %>
-			<%= attachment_image_tag @item, :image, size:"300x300", format: "jpeg", fallback: "no-image.png", class: "item_image" %>
+			<div class="box-list" style="margin-top: 20px">
+				<%= render 'layouts/error_messages', resource: @cart_item %>
+				<%= attachment_image_tag @item, :image, :fill, 200, 200, format: "jpeg", size:"200x200", fallback: "no-image.png" %>
+			</div>
 		</div>
 		<div class="col-xs-6 public items_show">
+			<h2><%= @item.name %></h2>
 			<h4><%= @item.introduction %></h4>
 			<p>ジャンル: <%= link_to @item.genre.name, items_path(genre_id: @item.genre_id) %></p>
 			<p>
