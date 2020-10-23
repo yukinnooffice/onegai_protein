@@ -16,11 +16,108 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 14px;
+    color: #272343;
+}
+/* ここから下がボタンのCSS　*/
+.btn-border {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid #1e46a1;
+  font-size: 16px;
+  color: #1e46a1;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+  margin:5px;
+}
+
+.btn-border:hover {
+  background-color: #1e46a1;
+  border-color: #03a9f4;
+  color: #FFF;
+}
+
+
+// video------------------------------------------
+.wrap-video{
+  position:relative;
+}
+.wrap-video video{
+  width: 100%;
+  height:100%;
+  height:700px;
+}
+.wrap-video .text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /*上下左右中央寄せ*/
+  text-align:center;
+}
+.wrap-video .text p{
+  font-size:16px;
+  font-weight:bold;
+  color:white;
+}
+.wrap-video .text .headline{
+  font-size:20px;
+}
+
+
+.btn-hachiss {
+    color: #272343;
+    background-color: #ffd803;
+}
+.btn-hachiss:hover {
+    color: #272343;
+    background-color: #e7c500;
+    transition: .2s;
+}
+// オリジナルbtn_2
+.btn-drk {
+    color: #ffd803; 
+    background-color: #272343;
+}
+.btn-drk:hover {
+    color: #e7c500;
+    background-color: #140e3d;
+    transition: .2s;
+}
+// オリジナルbtn_3
+.btn-blm {
+    color: #272343;
+    background-color: #bae8e8;
+}
+.btn-blm:hover {
+    color: #272343;
+    background-color: #9cdada;
+    transition: .2s;
+}
+
+/* Opacity #1 */
+.Opacity figure img {
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.Opacity figure:hover img {
+    opacity: .5;
+}
+
 
 #img_prev{
 　border-radius:100px;
@@ -125,7 +222,7 @@
 }
 
 //formのデザインーーーーーーーーーーーーーー
-input[type=text]:not(.search), input[type=email], input[type=password] {
+input[type=text]:not(.normal), input[type=email], input[type=password] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -218,6 +315,8 @@ footer{
 
 .fa-search{
  font-size:20px;
+ color:white;
+ margin-top:10px;
 }
 
 

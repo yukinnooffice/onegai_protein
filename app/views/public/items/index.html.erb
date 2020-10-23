@@ -6,7 +6,7 @@
 	<div class="f-container">
 		<% @genres.each do |genre| %>
 		    <%= link_to items_path(genre_id: genre.id) do %>
-				<div class="f-item public_items_genre"><%= genre.name%></div>
+				<div class="btn-border"><%= genre.name%></div>
 			<% end %>
 		<% end %>
 	</div>
@@ -14,9 +14,9 @@
 	  <div class="col-xs-12 public items_index">
 
 			<% if params[:genre_id] %>
-				<h2 class="section-top"><%= @genre.name %>の商品一覧 (全<%= @all_items_count %>件)</h2>
+				<h2 class="section-top"><%= @genre.name %> (<%= @all_items_count %>)</h2>
 			<% else %>
-				<h2 class="section-top">商品一覧 (全<%= @all_items_count %>件)</h2>
+				<h2 class="section-top">Item List (<%= @all_items_count %>)</h2>
 			<% end %>
 			<% if @items.first %>
 			<div class="box-list">
