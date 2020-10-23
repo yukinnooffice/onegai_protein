@@ -26,7 +26,7 @@
 <div class="f-container">
 	<% @genres.each do |genre| %>
 	    <%= link_to items_path(genre_id: genre.id) do %>
-			<div class="f-item public_items_genre"><%= genre.name%></div>
+			<div class="btn-border"><%= genre.name%></div>
 		<% end %>
 	<% end %>
 </div>
@@ -36,13 +36,13 @@
 <%= link_to items_path do %>
 
 
-<div class="f-container">
-	<div class=" item_image1"><img src="https://user-images.githubusercontent.com/68215378/96173209-7dfee300-0f62-11eb-8295-47c469e8aef7.jpg"></div>
-	<div class=" item_image2"><img src="https://user-images.githubusercontent.com/68215378/96234532-87c12e80-0fd4-11eb-9e88-f65f5dc04abf.jpg"></div>
+<div class="f-container Opacity">
+	<figure class=" item_image1 Opacity"><img src="https://user-images.githubusercontent.com/68215378/96173209-7dfee300-0f62-11eb-8295-47c469e8aef7.jpg"></figure>
+	<figure class=" item_image2"><img src="https://user-images.githubusercontent.com/68215378/96234532-87c12e80-0fd4-11eb-9e88-f65f5dc04abf.jpg"></<figure>
 </div>
-<div class="f-container">
-	<div class=" item_image3"><img src="https://user-images.githubusercontent.com/68215378/96245595-71ba6a80-0fe2-11eb-8d8d-afcd08cd4703.jpg"></div>
-	<div class=" item_image4"><img src="https://user-images.githubusercontent.com/68215378/96251740-dc23d880-0feb-11eb-9bdc-621e95ff5170.jpg"></div>
+<div class="f-container Opacity">
+	<figure class=" item_image3 Opacity "><img src="https://user-images.githubusercontent.com/68215378/96245595-71ba6a80-0fe2-11eb-8d8d-afcd08cd4703.jpg"></figure>
+	<figure class=" item_image4 Opacity"><img src="https://user-images.githubusercontent.com/68215378/96251740-dc23d880-0feb-11eb-9bdc-621e95ff5170.jpg"></figure>
 </div>
 <% end %>
 
@@ -51,9 +51,26 @@
 	<h3>ABOUT</h3>
 	<p>アバウト</p>
 </div>
-<div class="f-container">
+
+<!-- 
+<div class="wrap-video">
+  <div class="text">
+    <p>full screen video !</p>
+    <p class="headline">背景に動画を表示してみる</p>
+  </div>
+  <video src="../../../assets/videos/video.mp4" muted autoplay loop></video>
+</div>
+
+<video autoplay loop muted controls >
+  <source src="../../../assets/videos/video.mp4" type="video/mp4" />
+
+</video> -->
+
+
+
+<div class="f-container Opacity">
 	<%= link_to about_path do %>
-	<div class=" item_image5"><img src="https://user-images.githubusercontent.com/68215378/96283974-ecea4380-1017-11eb-9f0f-4a082ee4ec0d.jpg"></div>
+	<figure class=" item_image5 Opacity"><img src="https://user-images.githubusercontent.com/68215378/96283974-ecea4380-1017-11eb-9f0f-4a082ee4ec0d.jpg"></<figure>
 	<% end %>
 </div>
 
