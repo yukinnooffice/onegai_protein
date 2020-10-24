@@ -48,25 +48,24 @@
 
 
 <div class="row item-info">
+	<h3>TRAINING　MOVIE</h3>
+	<p>トレーニング動画</p>
+</div>
+
+<%= link_to items_path do %>
+<div class="wrap-video">
+  <div class="text">
+    <p>Watch training movies!</p>
+    <p class="headline">トレーニング動画を見る。</p>
+  </div>
+  <video src="videos/video1.mp4" muted autoplay loop></video>
+</div>
+<% end %>
+
+<div class="row item-info">
 	<h3>ABOUT</h3>
 	<p>アバウト</p>
 </div>
-
-<!-- 
-<div class="wrap-video">
-  <div class="text">
-    <p>full screen video !</p>
-    <p class="headline">背景に動画を表示してみる</p>
-  </div>
-  <video src="../../../assets/videos/video.mp4" muted autoplay loop></video>
-</div>
-
-<video autoplay loop muted controls >
-  <source src="../../../assets/videos/video.mp4" type="video/mp4" />
-
-</video> -->
-
-
 
 <div class="f-container Opacity">
 	<%= link_to about_path do %>

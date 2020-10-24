@@ -12,13 +12,13 @@
       <tbody>
         <tr>
           <td>名前　(性・名)</td>
-          <td><%= f.label :first_name,  class: "customer_name" %> <%= f.text_field :first_name, autofocus: true, :placeholder =>"山田" %></td>
-          <td><%= f.label :last_name,  class: "customer_name" %> <%= f.text_field :last_name, :placeholder =>"太郎" %></td>
+          <td><%= f.text_field :first_name, autofocus: true, :placeholder =>"山田" %></td>
+          <td><%= f.text_field :last_name, :placeholder =>"太郎" %></td>
         </tr>
         <tr>
           <td>フリガナ　(性・名)</td>
-          <td><%= f.label :first_name_kana %> <%= f.text_field :first_name_kana, :placeholder =>"ヤマダ" %></td>
-          <td><%= f.label :セイ　%> <%= f.text_field :last_name_kana, :placeholder =>"タロウ" %></td>
+          <td><%= f.text_field :first_name_kana, :placeholder =>"ヤマダ" %></td>
+          <td><%= f.text_field :last_name_kana, :placeholder =>"タロウ" %></td>
         </tr>
         <tr>
           <td><%= f.label :email, "メールアドレス" %></td>
@@ -53,5 +53,5 @@
   <% end %>
 
   <h2 class="section-ttl">既に登録済みの方</h2>
-  <p><%= link_to "こちら", new_customer_session_path, class: "underline" %>からログインしてください。</p>
+  <p><%= link_to "こちらからログインしてください。", new_customer_session_path, class: "btn btn-sm btn-hachiss" %></p>
 </div>
