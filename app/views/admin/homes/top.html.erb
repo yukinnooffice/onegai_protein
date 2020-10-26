@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h2 class="section-top">管理者トップ</h2>
+  <h2 class="section-top"><span class="fas fa-dumbbell" aria-hidden="true"></span> 管理者トップ</h2>
   <h3>本日の注文件数 <%= link_to admin_orders_path do %>
       <%= Order.where("created_at >= ?", Date.today).count %><% end %>
       件

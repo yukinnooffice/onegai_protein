@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 public orders_index">
-			<h2 class="section-top">注文履歴一覧</h2>
+			<h2 class="section-top"><span class="fas fa-dumbbell" aria-hidden="true"></span> 注文履歴一覧</h2>
 	<table class="orders table table-bordered">
 		<thead>
 			<tr>
@@ -27,10 +27,10 @@
 							<p><%= item.name %></p>
 						<% end %>
 					</td>
-					<td><%= order.grand_total %></td>
-					<td class="text-center"><%= order.status %></td>
+					<td class="text-right">¥<%= order.grand_total %></td>
+					<td class="text-center"><%= order.status_i18n%></td>
 					<td class="text-center">
-						<%= link_to "表示する", order_path(order), class: "btn btn-primary" %>
+						<%= link_to "表示する", order_path(order), class: "btn btn-sm btn-hachiss" %>
 					</td>
 				</tr>
 			<% end %>
