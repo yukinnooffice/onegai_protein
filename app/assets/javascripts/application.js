@@ -41,3 +41,6 @@ $(document).on('turbolinks:load', function() {
     hidePrevious : true
   });
 });
+
+
+

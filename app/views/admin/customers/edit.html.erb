@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
   	<div class="col-xs-12 admins customers_edit">
-			<h2 class="section-top"><%= @customer.first_name %> <%= @customer.last_name %> さんの会員情報編集</h2>
+			<h2 class="section-top"><span class="fas fa-dumbbell" aria-hidden="true"></span> <%= @customer.first_name %> <%= @customer.last_name %> さんの会員情報編集</h2>
 				<%= form_for(@customer, url: admin_customer_path(@customer)) do |f| %>
 				<table class="table customers-edit">
 					<thead>

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
   	<div class="col-xs-12 admins customers_show_main">
-			<h2 class="section-top"><%= @customer.full_name %>さんの会員詳細</h2>
+			<h2 class="section-top"><span class="fas fa-dumbbell" aria-hidden="true"></span> <%= @customer.full_name %>さんの会員詳細</h2>
 	    <table class="table customers-show">
 				<thead>
 					<th></th>
@@ -51,8 +51,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td><%= link_to "編集", edit_admin_customer_path(@customer), class: "btn btn-hachiss"
- %></td>
+						<td><%= link_to "編集", edit_admin_customer_path(@customer), class: "btn btn-hachiss"%></td>
+ 						<td></td>
 						<td><%= link_to "注文履歴一覧を見る", admin_customer_orders_path(@customer), class: "btn btn-blm" %></td>
 					</tr>
 				</tbody>

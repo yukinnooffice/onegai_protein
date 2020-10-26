@@ -4,15 +4,22 @@
     <title>onegai_purotain</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
 
   <body>
-
-    <h2 style="color:#007bff; text-align: center;">ONEGAI-PROTAIN</h2>
+    <div class="row">
+      <div class="col-xs-3">
+      </div>
+      <div class="col-xs-6">
+        <h2 class="title_logo">ONEGAI-PROTAIN</h2>
+      </div>
+      <div class="col-xs-3 top_sub_title">
+        あなたの為のプロテイン販売サイト
+      </div>
+    </div>
     <% if admin_signed_in? %>
       <header class="admin_header">
         <div class="container">
@@ -20,60 +27,55 @@
               <li class="nav-item nav-link"><%= link_to 'おねがいプロテイン', admin_top_path, class: "logo" %></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <div  class="fas fa-search" data-toggle="modal" data-target="#sampleModal">
-              </div>
               <li><%= link_to '商品一覧', admin_items_path %></li>
               <li><%= link_to '会員一覧', admin_customers_path %></li>
               <li><%= link_to '注文履歴一覧', admin_orders_path %></li>
               <li><%= link_to 'ジャンル管理', admin_genres_path %></li>
               <li><%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %></li>
+              <li  class="fas fa-search" data-toggle="modal"  data-target="#sampleModal"></li>
             </ul>
         </div>
       </header>
     <% elsif customer_signed_in? %>
       <header>
         <div class="container">
-            <ul class="nav navbar-nav navbar-left">
-              <li class="nav-item nav-link"><%= link_to 'おねがいプロテイン', root_path, class: "logo" %></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <div  class="fas fa-search" data-toggle="modal" data-target="#sampleModal">
-              </div>
-              <li class="nav-item nav-link"><%= link_to 'マイページ', mypage_path %></li>
-              <li class="nav-item nav-link"><%= link_to '商品一覧', items_path %></li>
-              <li class="nav-item nav-link"><%= link_to 'カート', cart_items_path %></li>
-              <li class="nav-item nav-link"><%= link_to 'ログアウト', destroy_customer_session_path, method: :delete %></li>
-            </ul>
-          </div>
+          <ul class="nav navbar-nav navbar-left">
+            <li class="nav-item nav-link"><%= link_to 'おねがいプロテイン', root_path, class: "logo" %></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item nav-link"><%= link_to 'マイページ', mypage_path %></li>
+            <li class="nav-item nav-link"><%= link_to '商品一覧', items_path %></li>
+            <li class="nav-item nav-link"><%= link_to 'カート', cart_items_path %></li>
+            <li class="nav-item nav-link"><%= link_to 'ログアウト', destroy_customer_session_path, method: :delete %></li>
+          </ul>
         </div>
       </header>
     <% else %>
       <header>
         <div class="container">
           <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item nav-link"><%= link_to 'おねがいプロテイン', root_path, class: "logo" %></li>
+            <li class="nav-item nav-link">
+              <%= link_to "おねがいプロテイン",root_path %>
+            </li>
           </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <div  class="fas fa-search" data-toggle="modal" data-target="#sampleModal">
-              </div>
-              <li class="nav-item nav-link"><%= link_to '商品一覧', items_path %></li>
-              <li class="nav-item nav-link"><%= link_to '新規登録', new_customer_registration_path %></li>
-              <li class="nav-item nav-link"><%= link_to 'ログイン', new_customer_session_path %></li>
-              <li class="nav-item nav-link"><%= link_to 'ゲストログイン（閲覧用）', guests_guest_sign_in_path, method: :post %></li>
-              <li class="nav-item nav-link"><%= link_to 'ゲストログイン（管理者用）', admin_admin_guest_sign_in_path, method: :post %></li>
-            </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item nav-link"><%= link_to '商品一覧', items_path %></li>
+            <li class="nav-item nav-link"><%= link_to '新規登録', new_customer_registration_path %></li>
+            <li class="nav-item nav-link"><%= link_to 'ログイン', new_customer_session_path %></li>
+            <li class="nav-item nav-link"><%= link_to 'ゲストログイン（お客様用）', guests_guest_sign_in_path, method: :post %></li>
+            <li class="nav-item nav-link"><%= link_to 'ゲストログイン（管理者用）', admin_admin_guest_sign_in_path, method: :post %></li>
+          </ul>
         </div>
       </header>
     <% end %>
+
     <main>
-   <% if flash[:notice] %>
-
-   
- <div class="notice"><%= notice %></div>
+    <% if flash[:notice] %>
+    <div class="notice"><%= notice %></div>
     <% end %>
-
       <%= yield %>
     </main>
+
     <footer class="footer">
       <% if admin_signed_in? %>
         <%# 管理者用フッター %>
@@ -83,29 +85,29 @@
         <%= render 'layouts/customer_footer' %>
       <% end %>
     </footer>
-  </body>
 
 
-<!-- モーダル・ダイアログ -->
-<div class="modal fade" id="sampleModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-        <h4 class="modal-title">サイト内検索</h4>
-      </div>
-      <div class="modal-body">
-      <%= form_tag(admin_search_path, method: :get) do %>
+     <!-- モーダル・ダイアログ -->
+    <div class="modal fade" id="sampleModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+            <h4 class="modal-title">サイト内検索</h4>
+          </div>
+          <div class="modal-body">
+            <%= form_tag(admin_search_path, method: :get) do %>
               <%= text_field_tag "search[content]", "", :placeholder =>"会員: 姓,名,セイ,メイ / 商品: 商品名" , class: "search"%>
               <%= select_tag "search[model]", options_for_select({ "会員" => "customer", "商品" => "item" }) %>
               <%= select_tag "search[method]", options_for_select({ "部分一致" => "partial", "前方一致" => "forward", "後方一致" => "backward", "完全一致" => "perfect" }) , class: "search"%>
               <%= submit_tag '検索', class: "btn btn-primary" %>
             <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </body>
 </html>

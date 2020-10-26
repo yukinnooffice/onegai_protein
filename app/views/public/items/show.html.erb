@@ -31,7 +31,7 @@
 					<%= form_for [@item, cart_item] do |f| %>
 						<p>こちらの商品は、既にカートに入っています。</p>
 						<%= f.select :amount, [*(1..10)] %>
-						<%= f.submit "数量変更", class: "btn btn-primary" %>
+						<%= f.submit "数量変更", class: "btn btn-border" %>
 					<% end %>
 				<% elsif @item.is_active? %>
 					<%= form_for [@item, @cart_item] do |f| %>
