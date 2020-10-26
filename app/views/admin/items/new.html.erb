@@ -1,2 +1,8 @@
-<h1>Admin::Items#new</h1>
-<p>Find me in app/views/admin/items/new.html.erb</p>
+<div class="container">
+  <div class="row">
+  	<div class="col-xs-12 admins items_new">
+			<h2 class="section-top"><span class="fas fa-dumbbell" aria-hidden="true"></span> 商品新規登録</h2>
+		</div>
+      <%= render 'form', item: @item, url: admin_items_path,　submit: '登録' %>
+	</div>
+</div>

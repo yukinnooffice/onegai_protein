@@ -1,2 +1,71 @@
-<h1>Public::Items#top</h1>
-<p>Find me in app/views/public/items/top.html.erb</p>
+<div id="skippr">
+  	<div id="theTarget">
+	    <div class="image1">
+	   	    <div class="mv">
+	   		</div>
+	    </div>
+	    <div class="image2">
+	    </div>
+	    <div class="image3">
+
+	    </div>
+	    <div class="image4">
+
+	    </div>
+  	</div>
+</div>
+
+
+<div class="row item-info">
+	<h3>PRODUCTS LINEUP</h3>
+	<p class="fadeIn first">商品ラインナップ</p>
+</div>
+
+<div class="f-container">
+	<% @genres.each do |genre| %>
+	    <%= link_to items_path(genre_id: genre.id) do %>
+			<div class="btn-border"><%= genre.name%></div>
+		<% end %>
+	<% end %>
+</div>
+
+<%= link_to items_path do %>
+
+
+<div class="f-container Opacity">
+	<figure class=" item_image1 Opacity"><img src="https://user-images.githubusercontent.com/68215378/96173209-7dfee300-0f62-11eb-8295-47c469e8aef7.jpg"></figure>
+	<figure class=" item_image2"><img src="https://user-images.githubusercontent.com/68215378/96234532-87c12e80-0fd4-11eb-9e88-f65f5dc04abf.jpg"></<figure>
+</div>
+<div class="f-container Opacity">
+	<figure class=" item_image3 Opacity "><img src="https://user-images.githubusercontent.com/68215378/96245595-71ba6a80-0fe2-11eb-8d8d-afcd08cd4703.jpg"></figure>
+	<figure class=" item_image4 Opacity"><img src="https://user-images.githubusercontent.com/68215378/96251740-dc23d880-0feb-11eb-9bdc-621e95ff5170.jpg"></figure>
+</div>
+<% end %>
+
+
+<div class="row item-info">
+	<h3>TRAINING　MOVIE</h3>
+	<p>トレーニング動画</p>
+</div>
+
+<%= link_to items_path do %>
+<div class="wrap-video">
+  <div class="text">
+    <p>Watch training movies!</p>
+    <p class="headline">トレーニング動画を見る。</p>
+  </div>
+  <video src="videos/video1.mp4" muted autoplay loop></video>
+</div>
+<% end %>
+
+<div class="row item-info">
+	<h3>ABOUT</h3>
+	<p>アバウト</p>
+</div>
+
+<div class="f-container Opacity">
+	<%= link_to about_path do %>
+	<figure class=" item_image5 Opacity"><img src="https://user-images.githubusercontent.com/68215378/96283974-ecea4380-1017-11eb-9f0f-4a082ee4ec0d.jpg"></<figure>
+	<% end %>
+</div>
+

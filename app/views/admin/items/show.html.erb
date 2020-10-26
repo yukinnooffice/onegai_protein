@@ -1,2 +1,53 @@
-<h1>Admin::Items#show</h1>
-<p>Find me in app/views/admin/items/show.html.erb</p>
+<div class="container">
+  <div class="row">
+		<h2 class="section-top"><span class="fas fa-dumbbell" aria-hidden="true"></span> 商品詳細</h2>
+		<div class="col-xs-5 admins items_show">
+			<div>
+				<div class="image_field">
+					<%= attachment_image_tag @item, :image, :fill, 400, 400, format: "jpeg", size:"400x400", fallback: "no-image.png"%>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-7 admins items_show">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>商品名</td>
+						<td><%= @item.name %></td>
+					</tr>
+					<tr>
+						<td>商品説明</td>
+						<td><%= @item.introduction %></td>
+					</tr>
+					<tr>
+						<td>ジャンル</td>
+						<td><%= link_to @item.genre.name, admin_items_path(genre_id: @item.genre_id), class: "underline" %></td>
+					</tr>
+					<tr>
+						<td>税抜価格</td>
+						<td><%= @item.price %>円</td>
+					</tr>
+					<tr>
+						<td>販売ステータス</td>
+						<td>
+							<% if @item.is_active? %>
+								<span class="text-active">販売中</span>
+							<% else %>
+								<span class="text-invalid">販売停止中</span>						<% end %>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="flex align-center pl5">
+				<%= link_to "編集する", edit_admin_item_path(@item), class: "btn btn-sm btn-hachiss"
+ %>
+			</div>
+		</div>
+	</div>
+</div>

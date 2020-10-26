@@ -16,6 +16,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 * {
   margin: 0;
   padding: 0;
@@ -23,14 +24,37 @@
 }
 
 
-// header　--------------------------------------------
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 14px;
+    color: #272343;
+}
+
+
+
+th{
+  background-color:#f5f5f5;
+}
+.title_logo{
+text-align:center;
+}
+
+
 header{
   text-decoration: none;
-  background-color: rgba(99, 194, 191, 1);
   height: 50px;
+  width:100%;
   font-family: Oswald,sans-serif;
   font-weight: 700;
+  background-color: #1e46a1;
+  border-bottom: rgba(150,245,80,.8) .222em solid;
+  z-index: 100;
+  position: -webkit-sticky;
+　position: sticky;
+　top: 0;
 }
+
+
 header li {
   list-style: none;
 }
@@ -38,6 +62,10 @@ header li {
   float:left;
 
 }
+.logo img{
+width:30px;
+}
+
 header a{
     color: #fff;
     text-decoration: none;
@@ -45,3 +73,446 @@ header a{
     line-height: 22px;
     letter-spacing: 1.5px;
 }
+
+footer{
+  margin-top:200px;
+  height:300px;
+  background-color: rgba(30,59,140,.9);
+  .container{
+    color:white;
+  }
+}
+
+.top_sub_title{
+  margin-top:30px;
+}
+
+/* ここから下がボタンのCSS　*/
+.btn-border {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid #1e46a1;
+  font-size: 16px;
+  color: #1e46a1;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .4s;
+  margin:5px;
+  background-color: white;
+}
+
+.btn-border:hover {
+  background-color: #1e46a1;
+  border-color: #03a9f4;
+  color: #FFF;
+}
+
+
+// video------------------------------------------
+.wrap-video{
+  position:relative;
+}
+.wrap-video video{
+  width: 100%;
+  height:100%;
+  height:700px;
+}
+.wrap-video .text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /*上下左右中央寄せ*/
+  text-align:center;
+}
+.wrap-video .text p{
+  font-size:16px;
+  font-weight:bold;
+  color:white;
+}
+.wrap-video .text .headline{
+  font-size:20px;
+}
+
+.mt-3{
+margin-top:30px;
+}
+.mt-2{
+margin-top:20px;
+}
+.mb-3{
+  margin-bottom:30px;
+}
+.mb-2{
+  margin-bottom:20px;
+}
+// オリジナルbtn_1
+.btn-hachiss {
+    color: #272343;
+    background-color: #ffd803;
+    display: inline-block;
+    width:100%;
+}
+.btn-hachiss:hover {
+    color: #272343;
+    background-color: #e7c500;
+    transition: .2s;
+}
+// オリジナルbtn_2
+.btn-drk {
+    color: #ffd803; 
+    background-color: #272343;
+    display: inline-block;
+    width:100%;
+}
+.btn-drk:hover {
+    color: #e7c500;
+    background-color: #140e3d;
+    transition: .2s;
+}
+// オリジナルbtn_3
+.btn-blm {
+    color: #272343;
+    background-color: #bae8e8;
+    display: inline-block;
+    width:100%;
+}
+.btn-blm:hover {
+    color: #272343;
+    background-color: #9cdada;
+    transition: .2s;
+}
+// オリジナルbtn_4
+.btn-red {
+    color: #fff;
+    background-color: #f83737;
+    display: inline-block;
+    width:100%;
+}
+.btn-red:hover {
+    color: #fff;
+    background-color: #d12929;
+    transition: .2s;
+}
+
+
+/* Opacity #1 */
+.Opacity figure img {
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.Opacity figure:hover img {
+    opacity: .5;
+}
+
+
+#img_prev{
+　border-radius:100px;
+　border:5px solid #F90;
+　width:200px;
+　overflow:hidden;
+　box-shadow:0 0 4px #666666;
+}
+.image_field {
+  width: 220px;
+  text-align: center;
+  p {
+    margin-top: 10px;
+    text-align: left;
+  }
+}
+.admin_item_image {
+  width: 220px;
+  height: 150px;
+
+  object-fit: cover;
+}
+.item_image {
+  display: block;
+  width: 360px;
+  height: 240px;
+
+  object-fit: cover;
+}
+.flash-title{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: table;
+  width: 100%;
+  height: 50%;
+  background: rgba(0,0,0,0.8);
+  -webkit-animation: fade-in-out 3s ease 2s forwards;
+  animation: fade-in-out 3s ease 2s forwards;
+  visibility: hidden;
+  z-index: 2;
+  p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 90px;
+  color: #fff;
+ }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.section-top{
+ text-align:center;
+ background: linear-gradient(transparent 60%, #d3dffa 0%);
+}
+.field{
+  text-align:center;
+}
+input.width-100{
+width:100%;
+}
+
+
+//サブミットボタンのデザインーーーーーーーーーーーーーー
+.submit {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit:hover {
+  background-color: #39ace7;
+}
+
+.submit:active {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+//formのデザインーーーーーーーーーーーーーー
+input[type=text]:not(.normal), input[type=email], input[type=password] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+.item_add_btn{
+  font-size:20px;
+}
+
+.return:hover {
+  text-decoration: none;
+}
+
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+input[type=email]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+input[type=password]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+// header　--------------------------------------------
+.toplogo{
+
+}
+
+
+
+
+.notice {
+    color: #fefbfb;
+    background: #ffd803;
+    text-align: center;
+    border: 2px solid #f6ffc3;
+    padding: 12px;
+    font-weight: 850;
+  }
+
+.fa-search{
+ font-size:20px;
+ color:white;
+ margin-top:15px;
+
+}
+.fa-search:hover{
+ font-size:20px;
+ color:white;
+ margin-top:10px;
+}
+
+.paginate{
+  text-align:center;
+  font-size:30px;
+}
+.box_border{
+  border: 3px solid #272343;
+}
+.intoroduction{
+  margin:20px 0px;
+}
+
+.item_image_btn{
+    display: none;
+}#元の送信ボタンを隠す
+
+#img_field {
+  font-size: 25px;
+  font-style: inherit;
+  margin: 0 auto;
+  color: white;
+  background-color: #5bc0de;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.btn02 {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #000;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  line-heigt: 1.2em;
+  -webkit-box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.4);
+  box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.4);
+  -webkit-transition: .12s;
+  transition: .12s;
+  border: solid 2px #000;
+}
+.btn02:hover {
+  background: #FFF;
+  border: solid 2px #000;
+  color: #000;
+  opacity: 0.8;
+}
+
+.btn03 {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #f83737;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  line-heigt: 1.2em;
+  -webkit-box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.4);
+  box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.4);
+  -webkit-transition: .12s;
+  transition: .12s;
+  border: solid 2px  #f83737;
+
+}
+.btn03:hover {
+  background: #FFF;
+  border: solid 2px  #f83737;
+  color: #f83737;
+  opacity: 0.8;
+}
+
+.about_row{
+ margin:30px 0px;
+ display: flex;
+ align-items: center;
+ height:700px;
+}
+
+
+.about_image1{
+  background-image: image-url("yoga-3651926_960_720");
+  height:100%;
+  margin:0 auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+.about_image2{
+  background-image: image-url("fitness-4055725_960_720.jpg");
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+.about_image3{
+  background-image: image-url("fitness-3496316_960_720.jpg");
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.intoroduction{
+  word-break: break-all;
+}
+
+.p-0{
+ padding:0px;
+}
+
+
+
+// <!-- class: "width-100%"
+// class: "btn btn-sm btn-hachiss"
+//  class: "submit"
+//  class="btn-border"
+// //  class: "btn02" -->
+// class="btn btn-border"

@@ -1,2 +1,50 @@
-<h1>Public::Items#show</h1>
-<p>Find me in app/views/public/items/show.html.erb</p>
+<div class="container">
+	<div class="f-container">
+		<% @genres.each do |genre| %>
+		    <%= link_to items_path(genre_id: genre.id) do %>
+				<div class="btn-border"><%= genre.name%></div>
+			<% end %>
+		<% end %>
+	</div>
+	<div class="row box_border">
+		<div class="col-xs-6 public items_show">
+			<div class="box-list" style="margin-top: 20px">
+				<%= render 'layouts/error_messages', resource: @cart_item %>
+				<%= attachment_image_tag @item, :image, :fill, 420, 400, format: "jpeg", size:"400x400", fallback: "no-image.png" %>
+			</div>
+		</div>
+		<div class="col-xs-6 public_items_show">
+			<h2><%= @item.name %></h2>
+			<p>ジャンル: <%= link_to @item.genre.name, items_path(genre_id: @item.genre_id) %></p>
+			<p>
+				¥<%= @item.with_tax_price %>(税込)
+				<% if @item.is_active? %>
+				<span class="text-active">販売中</span>
+				<% else %>
+				<span class="text-invalid">販売停止中</span>
+				<% end %>
+			</p><br>
+			<h4 class="intoroduction">商品説明：<%= @item.introduction %></h4>
+			<% if customer_signed_in? %>
+				<% cart_item = current_customer.has_in_cart(@item) %>
+				<% if cart_item %>
+					<%= form_for [@item, cart_item] do |f| %>
+						<p>こちらの商品は、既にカートに入っています。</p>
+						<%= f.select :amount, [*(1..10)] %>
+						<%= f.submit "数量変更", class: "btn btn-border" %>
+					<% end %>
+				<% elsif @item.is_active? %>
+					<%= form_for [@item, @cart_item] do |f| %>
+						<p>数量を選択して下さい。</p>
+						<p><%= f.select :amount, [*(1..10)], {selected: 1} %></p>
+						<p><%= f.submit "カートに入れる", class: "btn btn-sm btn-hachiss" %></p>
+					<% end %>
+				<% else %>
+					<p class="bold">こちらの商品は、現在販売停止中です。</p>
+				<% end %>
+			<% else %>
+				<p>カート機能をご利用いただくには、<br><%= link_to "こちら", new_customer_registration_path, class: "underline" %>から新規登録を行なってください。</p>
+			<% end %>
+		</div>
+	</div>
+</div>

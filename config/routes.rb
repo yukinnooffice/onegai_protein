@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   }
   namespace :admin do
     get 'top' => 'homes#top', as: 'top'
+    post '/admin/guest_sign_in', to: 'guests#new_guest'
     get 'search' => 'homes#search', as: 'search'
     get 'customers/:customer_id/orders' => 'orders#index', as: 'customer_orders'
     resources :customers, only: [:index, :show, :edit, :update]
@@ -21,6 +22,8 @@ Rails.application.routes.draw do
 
   scope module: :public do
     root 'items#top'
+    post '/guests/guest_sign_in', to: 'guests#new_guest'
+    get 'items/about' => 'items#about', as: 'about'
     get 'customers/mypage' => 'customers#show', as: 'mypage'
     get 'customers/information/edit' => 'customers#edit', as: 'edit_information'
     patch 'customers/information' => 'customers#update', as: 'update_information'
