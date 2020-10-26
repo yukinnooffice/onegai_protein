@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 public orders_confirm">
-			<h2 class="section-top">注文情報確認</h2>
+			<h2 class="section-top"><span class="fas fa-dumbbell" aria-hidden="true"></span> 注文情報確認</h2>
 			<table class="confirm_cart_items table table-bordered">
 				<thead>
 					<tr>
@@ -63,7 +63,7 @@
 				<%= f.hidden_field :name, value: @order.name %>
 			</div>
 			<div class="text-center">
-				<%= f.submit "注文を確定する", class: "btn btn-primary submit_to_create_order" %>
+				<%= f.submit "注文を確定する", class: "btn btn-hachiss submit_to_create_order" %>
 			</div>
 		<% end %>
 	</div>

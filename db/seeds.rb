@@ -13,9 +13,9 @@ Customer.create!(
   [
     {
       first_name: "おねがい",
-      last_name: "プロテイン",
+      last_name: "太郎",
       first_name_kana: "オネガイ",
-      last_name_kana: "プロテイン",
+      last_name_kana: "タロウ",
       email: "0@0",
       postal_code: "7777777",
       address: "大阪府大阪市中央区1-1-1-1-1",
@@ -24,10 +24,10 @@ Customer.create!(
       password: "000000",
     },
     {
-      first_name: "おねがい",
-      last_name: "クレアチン",
-      first_name_kana: "オネガイ",
-      last_name_kana: "クレアチン",
+      first_name: "ぷろていん",
+      last_name: "花子",
+      first_name_kana: "プロテイン",
+      last_name_kana: "ハナコ",
       email: "1@1",
       postal_code: "8888888",
       address: "和歌山県有田市11111",
@@ -47,13 +47,13 @@ Address.create!(
     },
     {
       customer_id: 1,
-      name: "新宿校",
+      name: "新宿",
       postal_code: "1600022",
       destination: "東京都新宿区新宿2-5-10 成信ビル 4階"
     },
     {
       customer_id: 1,
-      name: "難波校",
+      name: "難波",
       postal_code: "5420076",
       destination: "大阪府大阪市中央区難波4-7-14 難波フロントビル 4階"
     }
@@ -71,44 +71,60 @@ Genre.create!(
     },
     {
       name: "サプリ",
-      is_active: false,
+      is_active: true,
     },
     {
       name: "トレーニング器具",
-      is_active: false,
+      is_active: true,
     },
     {
-      name: "その他",
+      name: "グッズ",
       is_active: true,
     }
   ]
   )
-for i in 1..10 do
+for i in 1..5 do
   Item.create!(
     [
       {
         genre_id: 1,
-        name: "プロテイン#{i}",
-        introduction: "#{3*i-2}番目の商品です。",
-        price: rand(1..10) * 100,
-        image: File.open("./app/assets/images/cake#{i%5+1}.jpg"),
+        name: "WHI-PROTAIN #{i}",
+        introduction: "理想とする筋肉のために!理想的なカラダづくりに取り組む方のために、たんぱく原料として利用効率が高いホエイプロテインのみを採用しました。タンパク質はなんと一杯あたり30g配合！",
+        price: 5000,
+        image: File.open("./app/assets/images/protain#{i%5+1}.jpg"),
         is_active: true
       },
       {
         genre_id: 2,
-        name: "フード#{i}",
-        introduction: "#{3*i-1}番目の商品です。",
-        price: rand(1..10) * 200,
-        image: File.open("./app/assets/images/cookies#{i%5+1}.jpg"),
+        name: "プロテインバー#{i}",
+        introduction: "たっぷりたんぱく質のシリアルバー。スポーツ時に嬉しい、プロテイン30ｇ配合。プロテイン入りとは思えないおいしさを実現。",
+        price: 120,
+        image: File.open("./app/assets/images/ber#{i%5+1}.jpg"),
         is_active: true
       },
       {
         genre_id: 3,
-        name: "サプリ#{i}",
-        introduction: "#{3*i}番目の商品です。",
-        price: rand(1..10) * 300,
-        image: File.open("./app/assets/images/pudding#{i%5+1}.jpg"),
-        is_active: false
+        name: "サプリメント#{i}",
+        introduction: "スポーツサプリとして人気のアミノ酸です。アスリートやボディビルダーにとって重要な成分を含んでいます。トレーニングや競技のお供に。",
+        price: 4000,
+        image: File.open("./app/assets/images/Supplement#{i%5+1}.jpg"),
+        is_active: true
+      },
+      {
+        genre_id: 4,
+        name: "トレーニングアイテム#{i}",
+        introduction: "おねがいプロテイン製の上質なトレーニングアイテムです！ホームトレーニングでの使用にも適しています！",
+        price: 4000,
+        image: File.open("./app/assets/images/item#{i%5+1}.jpg"),
+        is_active: true
+      },
+      {
+        genre_id: 5,
+        name: "プロテインシェイカー#{i}",
+        introduction: "サプリケースやスプリング付属しています！液漏れが一切しない、おねがいプロテイン製のプロテインシェイカーです！",
+        price: 4000,
+        image: File.open("./app/assets/images/goods#{i%5+1}.jpg"),
+        is_active: true
       }
     ]
     )

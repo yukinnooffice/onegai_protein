@@ -12,7 +12,7 @@ class Public::ItemsController < ApplicationController
     else
       all_items = Item.where_genre_active.includes(:genre)
     end
-    @items = all_items.page(params[:page]).per(12)
+    @items = all_items.page(params[:page]).per(15)
     @all_items_count = all_items.count
   end
 
