@@ -1,6 +1,13 @@
 class Public::CustomersController < ApplicationController
   before_action :authenticate_customer!
   before_action :set_current_customer
+  before_action :check_guest, only: %i[update withdraw]
+
+  def check_guest
+    if @customer.email == 'guestcustomer@example.com'
+      redirect_to root_path, notice: 'ゲストユーザーは編集できません。'
+    end
+  end
 
   def show
   end
