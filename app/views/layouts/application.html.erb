@@ -21,35 +21,9 @@
       </div>
     </div>
     <% if admin_signed_in? %>
-      <header class="admin_header">
-        <div class="container">
-            <ul class="nav navbar-nav navbar-left">
-              <li class="nav-item nav-link"><%= link_to 'おねがいプロテイン', admin_top_path, class: "logo" %></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to '商品一覧', admin_items_path %></li>
-              <li><%= link_to '会員一覧', admin_customers_path %></li>
-              <li><%= link_to '注文履歴一覧', admin_orders_path %></li>
-              <li><%= link_to 'ジャンル管理', admin_genres_path %></li>
-              <li><%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %></li>
-              <li  class="fas fa-search" data-toggle="modal"  data-target="#sampleModal"></li>
-            </ul>
-        </div>
-      </header>
+      <%= render 'layouts/admin_header'%>
     <% elsif customer_signed_in? %>
-      <header>
-        <div class="container">
-          <ul class="nav navbar-nav navbar-left">
-            <li class="nav-item nav-link"><%= link_to 'おねがいプロテイン', root_path, class: "logo" %></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item nav-link"><%= link_to 'マイページ', mypage_path %></li>
-            <li class="nav-item nav-link"><%= link_to '商品一覧', items_path %></li>
-            <li class="nav-item nav-link"><%= link_to 'カート', cart_items_path %></li>
-            <li class="nav-item nav-link"><%= link_to 'ログアウト', destroy_customer_session_path, method: :delete %></li>
-          </ul>
-        </div>
-      </header>
+      <%= render 'layouts/customer_header' %>
     <% else %>
       <header>
         <div class="container">

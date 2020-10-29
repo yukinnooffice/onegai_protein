@@ -1,0 +1,15 @@
+<header class="admin_header">
+  <div class="container">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="nav-item nav-link"><%= link_to 'おねがいプロテイン', admin_top_path, class: "logo" %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to '商品一覧', admin_items_path %></li>
+        <li><%= link_to '会員一覧', admin_customers_path %></li>
+        <li><%= link_to '注文履歴一覧', admin_orders_path %></li>
+        <li><%= link_to 'ジャンル管理', admin_genres_path %></li>
+        <li><%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %></li>
+        <li  class="fas fa-search" data-toggle="modal"  data-target="#sampleModal"></li>
+      </ul>
+  </div>
+</header>
