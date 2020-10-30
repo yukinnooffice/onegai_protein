@@ -2,6 +2,7 @@
 
 ### サイト名（おねがいプロテイン！）
 個人で開発したプロテイン販売サイトです。
+![image](https://user-images.githubusercontent.com/68215378/97697787-d7324f00-1aea-11eb-8c79-157499817b37.jpg)
 
 <br>
 <br>
