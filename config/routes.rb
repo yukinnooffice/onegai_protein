@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :admin, controllers: {
     sessions: 'admin/sessions',
   }
@@ -35,6 +36,8 @@ Rails.application.routes.draw do
     post 'orders/confirm' => 'orders#confirm'
     get 'orders/confirm' => 'orders#error'
     get 'orders/thanks' => 'orders#thanks', as: 'thanks'
+    get 'trainings/index' => 'trainings#index', as: 'trainings'
+    get 'trainings/show' => 'trainings#show', as: 'training'
 
     resources :addresses, only: [:index, :create, :edit, :update, :destroy]
     resources :items, only: [:index, :show] do
