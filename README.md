@@ -86,6 +86,6 @@ https://docs.google.com/spreadsheets/d/1utE0TERuU0QG-gAe4PpS3KcPTXgFzHBL-wEJHkGp
 =======
 
 ### ターゲットユーザ
-体型にコンプレックスを抱える人<br>
+プロテインを購入したい人<br>
 もっと体を鍛えたい人<br>
 ダイエットしたい人<br>
