@@ -1,7 +1,7 @@
 class Public::ItemsController < ApplicationController
   def top
     @genres = Genre.only_active.includes(:items)
-    @items = Item.all
+    @items = Item.last(6)
   end
 
   def index
