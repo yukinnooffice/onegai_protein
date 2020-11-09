@@ -1,24 +1,16 @@
+<!-- top画面スライド -->
 <div id="skippr">
   	<div id="theTarget">
-	    <div class="image1">
-	   	    <div class="mv">
-	   		</div>
-	    </div>
-	    <div class="image2">
-	    </div>
-	    <div class="image3">
-
-	    </div>
-	    <div class="image4">
-
-	    </div>
+	    <div class="skippr_image1"></div>
+	    <div class="skippr_image2"></div>
+	    <div class="skippr_image3"></div>
+	    <div class="skippr_image4"></div>
   	</div>
 </div>
 
-
 <div class="row item-info">
 	<h3>PRODUCTS LINEUP</h3>
-	<p class="fadeIn first">商品ラインナップ</p>
+	<p class="top_title">商品ラインナップ</p>
 </div>
 
 <div class="f-container">
@@ -30,18 +22,42 @@
 </div>
 
 <%= link_to items_path do %>
-
-
-<div class="f-container Opacity">
-	<figure class=" item_image1 Opacity"><%= image_tag asset_path("toreny.jpg") %></figure>
-	<figure class=" item_image2"><%= image_tag asset_path("protain_ber_girl.jpg") %></figure>
-</div>
-<div class="f-container Opacity">
-	<figure class=" item_image3 Opacity "><%= image_tag asset_path("power-men.jpg") %></figure>
-	<figure class=" item_image4 Opacity"><%= image_tag asset_path("item_girl.jpg") %></figure>
-</div>
+	<div class="f-container Opacity">
+		<figure class="top_item_image"><%= image_tag asset_path("toreny.jpg") %></figure>
+		<figure class="top_item_image"><%= image_tag asset_path("protain_ber_girl.jpg") %></figure>
+	</div>
+	<div class="f-container Opacity">
+		<figure class="top_item_image"><%= image_tag asset_path("power-men.jpg") %></figure>
+		<figure class="top_item_image"><%= image_tag asset_path("item_girl.jpg") %></figure>
+	</div>
 <% end %>
 
+<div class="row item-info">
+	<h3>NEW LINEUP</h3>
+	<p>新着商品</p>
+</div>
+
+<div class="f-container">
+	<div class="box-list">
+		<% if @items.first %>
+			<% @items.each do |item| %>
+				<div class="list public items_index Opacity">
+					<%= link_to item_path(item) do %>
+						<figure class="Opacity"><%= attachment_image_tag item, :image, :fill, 210, 210, format: "jpeg", size:"210x210", fallback: "no-image.png"%></figure>
+					<% end %>
+					<h5><%= item.genre.name %></h5>
+					<p><%= item.name %></p>
+					<p class="text-right"><%= item.with_tax_price %>円  (税込)</p>
+					<%= link_to item_path(item) do %>
+						<div class="btn btn-sm btn-hachiss">詳細を見る</div>
+					<% end %>
+				</div>
+			<% end %>
+		<% else %>
+			<h3>対応する商品はありませんでした。</h3>
+		<% end %>
+	</div>
+</div>
 
 <div class="row item-info">
 	<h3>TRAINING　MOVIE</h3>
@@ -49,23 +65,23 @@
 </div>
 
 <%= link_to trainings_path do %>
-<div class="wrap-video">
-  <div class="text">
-    <p>Watch training movies!</p>
-    <p class="headline">トレーニング動画を見る。</p>
-  </div>
-  <%= video_tag("/videos/video1.mp4", autoplay: true ,muted: true ,loop: true) %>
-</div>
+	<div class="wrap-video">
+	  <div class="text">
+	    <p>Watch training movies!</p>
+	    <p class="headline">トレーニング動画を見る。</p>
+	  </div>
+	  <%= video_tag("/videos/video1.mp4", autoplay: true ,muted: true ,loop: true)  %>
+	</div>
 <% end %>
 
 <div class="row item-info">
 	<h3>ABOUT</h3>
-	<p>アバウト</p>
+	<p>このサイトについて</p>
 </div>
 
-<div class="f-container Opacity">
+<div class="f-container Opacity link_about">
 	<%= link_to about_path do %>
-	<figure class=" item_image5 Opacity"><img src="https://user-images.githubusercontent.com/68215378/96283974-ecea4380-1017-11eb-9f0f-4a082ee4ec0d.jpg"></<figure>
+		<figure class="top_item_image2"><%= image_tag asset_path("gym_girl.jpg") %></figure>
 	<% end %>
 </div>
 
