@@ -88,10 +88,10 @@ for i in 1..5 do
     [
       {
         genre_id: 1,
-        name: "WHI-PROTAIN #{i}",
+        name: "WHI-protein #{i}",
         introduction: "理想とする筋肉のために!理想的なカラダづくりに取り組む方のために、たんぱく原料として利用効率が高いホエイプロテインのみを採用しました。タンパク質はなんと一杯あたり30g配合！",
         price: 5000,
-        image: File.open("./app/assets/images/protain#{i%5+1}.jpg"),
+        image: File.open("./app/assets/images/protein#{i%5+1}.jpg"),
         is_active: true
       },
       {

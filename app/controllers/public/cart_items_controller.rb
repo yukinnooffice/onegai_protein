@@ -23,13 +23,17 @@ class Public::CartItemsController < ApplicationController
   end
 
   def update
-    @cart_item.update(cart_item_params) if @cart_item
-    redirect_to cart_items_path
+    @cart_item.update(cart_item_params)
+    if @cart_item
+      redirect_to cart_items_path
+    end
   end
 
   def destroy
-    @cart_item.destroy if @cart_item
-    redirect_to cart_items_path
+    @cart_item.destroy
+    if @cart_item
+      redirect_to cart_items_path
+    end
   end
 
   def destroy_all
