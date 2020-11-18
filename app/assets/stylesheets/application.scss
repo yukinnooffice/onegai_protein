@@ -525,6 +525,11 @@ input[type=password]:focus {
 
 //アバウトページーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 
+.about-top-image{
+    img {
+ max-width: 100%;
+  }
+}
 
 .about_row{
  margin:30px 0px;
@@ -560,6 +565,11 @@ input[type=password]:focus {
 
 .intoroduction{
   word-break: break-all;
+}
+.about-footer-img{
+  img {
+ max-width: 100%;
+  }
 }
 
 
