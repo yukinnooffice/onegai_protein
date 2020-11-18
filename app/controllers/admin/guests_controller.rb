@@ -1,10 +1,4 @@
 class Admin::GuestsController < ApplicationController
-  　before_action :check_guest, only: %i[update withdraw]
- def check_guest
-   if @customer.email == 'guestcustomer@example.com'
-     redirect_to root_path, notice: 'ゲストユーザーは編集できません。'
-   end
- end
 
   def new_guest
     admin = Admin.find_or_create_by!(
