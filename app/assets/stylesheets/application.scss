@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require simple_calendar
  *= require_tree .
  *= require_self
  */
@@ -114,7 +115,23 @@ th{
   margin: 7px;
 }
 
-//ページネイト
+// ページネーション
+.pagination{
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+.pagination span{
+  background-color: #ffffff;
+  text-align: center;
+  width: 50px;
+  color: rgb(197, 20, 159);
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
 .paginate{
   text-align:center;
   font-size:30px;
@@ -486,7 +503,32 @@ input[type=password]:focus {
   display: none;
 }
 
+.btn04 {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #97f628;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  line-heigt: 1.2em;
+  -webkit-box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.4);
+  box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.4);
+  -webkit-transition: .12s;
+  transition: .12s;
+  border: solid 2px  #97f628;
 
+}
+.btn04:hover {
+  background: #FFF;
+  border: solid 2px  #97f628;
+  color: #97f628;
+  opacity: 0.8;
+}
+.item_image_btn{
+  display: none;
+}
 
 //フラッシュメッセージーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 .notice {
@@ -594,6 +636,33 @@ input[type=password]:focus {
   background-image: image-url("running-573762_1920.jpg");
 }
 
+
+// カレンダー ---------------------------------------------------------------------
+.simple-calendar {
+  .day {}
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {
+    background: #98fb98;
+  }
+}
 
 
 

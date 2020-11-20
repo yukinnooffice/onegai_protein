@@ -6,6 +6,7 @@ class Customer < ApplicationRecord
 
   has_many :addresses, dependent: :destroy
   has_many :cart_items, dependent: :destroy
+  has_many :memos, dependent: :destroy
   has_many :orders
 
   scope :only_active, -> { where(is_active: true) }
