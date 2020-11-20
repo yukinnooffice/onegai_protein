@@ -1,0 +1,46 @@
+<div class="container-fluid">
+	<h2 class="section-top"><span class="fas fa-dumbbell" aria-hidden="true"></span> トレーニング編集</h2>
+	<div class="col-md-3 col-sm-12 col-xs-12">
+    <%= form_for (@memo) do |f| %>
+      <div class="field row">
+        <label for="menu">トレーニング名</label>
+        <p><%= f.text_area :menu%></p>
+        <label for="weight">重量</label>
+        <p><%= f.select :weight, [*(0..200)]%></p>
+        <label for="rep">回数</label>
+        <p><%= f.select :rep, [*(1..100)]%></p>
+        <label for="set">セット数</label>
+        <p><%= f.select :set, [*(1..30)]%></p>
+        <label for="start_time">トレーニング日</label>
+        <p><%= f.datetime_select :start_time %></p>
+      </div>
+      <div class="actions row">
+        <%= f.submit class: "btn btn-sm btn-hachiss" %>
+      </div>
+    <% end %>
+    </div>
+	  <div class="col-md-9 col-sm-12 col-xs-12">
+		<table class="memo table table-bordered">
+			<thead>
+				<tr>
+					<th>トレーニング名</th>
+					<th>重量</th>
+					<th>回数</th>
+					<th>セット数</th>
+					<th>トレーニング日</th>
+					<th></th>
+				</tr>
+		  </thead>
+			<tbody>
+				<tr>
+					<td><%= @memo.menu%></td>
+					<td><%= @memo.weight%></td>
+					<td><%= @memo.rep%></td>
+					<td><%= @memo.set%></td>
+					<td><%= @memo.start_time.strftime("%Y-%m-%d %H:%M")%></td>
+					<td><%=link_to "削除",memo_path(@memo) , method: :delete , data: {confirm:"削除しますか"} ,:class=>"btn03"%></td>
+				</tr>
+			</tbody>
+   	</table>
+	</div>
+</div>
