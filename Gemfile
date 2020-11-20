@@ -77,6 +77,7 @@ gem 'enum_help'
 gem 'dotenv-rails'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem 'simple_calendar', '~> 2.0'
 group :production do
   gem 'mysql2'
 end
