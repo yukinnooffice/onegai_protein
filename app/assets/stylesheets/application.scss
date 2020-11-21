@@ -116,25 +116,10 @@ th{
 }
 
 // ページネーション
-.pagination{
-  margin: auto;
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-}
-.pagination span{
-  background-color: #ffffff;
-  text-align: center;
-  width: 50px;
-  color: rgb(197, 20, 159);
-  transition: .3s;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
 .paginate{
   text-align:center;
   font-size:30px;
+
 }
 .title_logo{
 text-align:center;
@@ -230,8 +215,7 @@ margin-top:20px;
   line-height: 40px;
 }
 .top_item_image {
-  height:388px;
-  width:700px;
+  width:600px;
   margin:10px;
   img {width:100%;}
 }
@@ -624,7 +608,7 @@ input[type=password]:focus {
 }
 
 .skippr_image1 {
-  background-image: image-url("bodybuilder-925770_1920.jpg");
+  background-image: image-url("top_image5.jpg");
 }
 .skippr_image2 {
   background-image: image-url("strawberry-red-3456953_1920.jpg");
@@ -633,9 +617,14 @@ input[type=password]:focus {
   background-image: image-url("training-828715_1920.jpg");
 }
 .skippr_image4 {
+  background-image: image-url("bodybuilder-925770_1920.jpg");
+}
+.skippr_image5 {
   background-image: image-url("running-573762_1920.jpg");
 }
-
+.skippr-nav-element{
+ background-color:#1e46a1;
+}
 
 // カレンダー ---------------------------------------------------------------------
 .simple-calendar {
