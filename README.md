@@ -61,7 +61,7 @@ GIF画像を掲載します。
 
 
 ### デプロイ環境
-![PNG]https://user-images.githubusercontent.com/68215378/99869338-7b507700-2c0d-11eb-8d04-a52df43a8a30.png
+![img](https://user-images.githubusercontent.com/68215378/99903302-e2058b80-2d06-11eb-9721-3951642de295.jpg)
 - AWS(EC2,ElasticIP,RDS,Route53,S3,IAM)
 - puma
 - nginx
