@@ -1,0 +1,9 @@
+	<% if customer_signed_in? %>
+		<%= link_to memos_path do %>
+			<figure class="top_item_image2"><%= image_tag asset_path("top_image5.jpg") %></figure>
+		<% end %>
+	<% else %>
+		<%= link_to new_customer_registration_path do %>
+			<figure class="top_item_image2"><%= image_tag asset_path("top_image5.jpg") %></figure>
+		<% end %>
+	<% end %>
