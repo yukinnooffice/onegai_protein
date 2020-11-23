@@ -62,13 +62,12 @@
 
 <div class="row item-info">
 	<h3>TRAINING　MEMO</h3>
-	<p>トレーニングメモ</p>
+	<p>トレーニングメモ<br>会員登録後、使用出来ます。</p>
+
 </div>
 
 <div class="f-container Opacity link_memo">
-	<%= link_to memos_path do %>
-		<figure class="top_item_image2"><%= image_tag asset_path("top_image5.jpg") %></figure>
-	<% end %>
+	<%= render 'memos_link'%>
 </div>
 
 <div class="row item-info">
