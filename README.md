@@ -71,13 +71,13 @@ GIF画像を掲載します。
 ## 設計関連
 
 
-### データベース定義書
+### インフラ設計書
   現行最新版。データベースに関しては不明点があれば、こちらをご覧ください。  
-[Googleドキュメントに移動します](https://docs.go98ogle.com/spreadsheets/d/1tnSmZZPBBJMnbuEx6ktwqgmKfi7ogeOx/edit#gid=13247555)
+[Googleドキュメントに移動します](https://docs.google.com/spreadsheets/d/15Jf1pC6NKWgO1sFKZwyCGiezY4A0FLnn9w2us-olwDc/edit?usp=sharing)
 
 
 ### テーブル定義所
-  現行最新版。使用gemなどはこちらに詳細に表記してあります。  
+  現行最新版。使用したテーブル詳細を表記してあります。  
 [Googleドキュメントに移動します](https://docs.google.com/spreadsheets/d/1tnSmZZPBBJMnbuEx6ktwqgmKfi7ogeOx/edit#gid=1324755598)
 
 
