@@ -5,10 +5,8 @@
 		<div class="image_field">
 			<%= attachment_image_tag item, :image, :fill, 210, 210, format: "jpeg", size:"210x210", fallback: "no-image.png"  ,id: "img_prev"%>
 			<span class="item_image_btn"><%= f.attachment_field :image , id: "file" %></span>
-			 <div id="img_field" onClick="$('#file').click()"  class="btn-border">
-    <p>画像選択</p>
-  </div>
-			<p>選択するとプレビューされます。<br>画像未選択のままだと、<br>「画像準備中」になります。</p>
+			 <div id="img_field" onClick="$('#file').click()"  class="btn-border"><P>画像選択</P></div>
+			<p>選択すると<br>プレビューされます。<br>画像未選択のままだと、<br>「画像準備中」になります。</p>
 		</div>
   </div>
 	<div class="col-xs-7 admins items_new">
