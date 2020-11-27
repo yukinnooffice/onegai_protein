@@ -183,10 +183,12 @@ margin-top:20px;
 }
 .image_field {
   width: 220px;
+  margin-top:10px;
   text-align: center;
   p {
-    margin-top: 10px;
-    text-align: left;
+    font-size:15px;
+    margin-bottom: 10px;
+    text-align: center;
   }
 }
 .item_image {
@@ -653,13 +655,10 @@ input[type=password]:focus {
   }
 }
 
+//ハンバーガーメニュー
 
 
 
 
-// <!-- class: "width-100%"
-// class: "btn btn-sm btn-hachiss"
-//  class: "submit"
-//  class="btn-border"
-// //  class: "btn02" -->
-// class="btn btn-border"
+
+
