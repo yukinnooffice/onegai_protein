@@ -1,91 +1,92 @@
-<br>
-
-### サイト名（おねがいプロテイン！）
-個人で開発したプロテイン販売サイトです。
-![image](https://user-images.githubusercontent.com/68215378/97698280-a1419a80-1aeb-11eb-93f7-f6721a1ca614.jpg)
-
-<br>
-<br>
-
-### サイト概要
-・自社開発のプロテイン販売サイト<br>
-<br>
-<br>
-<br>
-
-- - - -
-<br>
-
-### サイトテーマ
-・体を大きくしたい！タンパク質豊富な商品と、オリジナルのトレーニンググッズを提供。<br>
-<br>
-・初心者の方がジムに入りやすくなる様、器具の説明なども紹介。<br>
-<br>
-・男性用だけでなく、女性用のライトな筋トレメニューの考案。<br>
-<br>
+### おねがいプロテイン
+###### ~ プロテイン販売とトレーニングメモサイト ~ 
 
 
-- - - -
-<br>
+ご覧いただきありがとうございます。  
+こちらはポートフォリオとして作成したWEBアプリケーションです。
+( 学習2ヶ月 / 制作１ヶ月 )  
 
-### テーマを選んだ理由
-・コロナで在宅で過ごされる方が増えているため、体型に変化があった人が多くいると思い、<br>
-このサイトを通じて、健康食品やトレーニング器具の購入を行っていただき、<br>
-トレーニングに関する情報を提供する事で、体型に悩む人の問題を解決したいと考えました。<br>
-<br>
-・初心者がジムに入る際、機材の使い方が分からず、右往左往している初心者を多く見かけます。<br>
-実際、私にもその経験があり、事前に機材の使い方がまとまった記事があればいいと思いました。
-<br>
+![TOP PAGE](https://user-images.githubusercontent.com/68215378/99868581-07ab6b80-2c07-11eb-8662-725285807d7e.jpg)
 
-- - - -
-<br>
-
-### ターゲットユーザ
-体型にコンプレックスを抱える人<br>
-もっと体を鍛えたい人<br>
-ダイエットしたい人<br>
 
 <br>
-
-- - - -
 <br>
 
-### 主な利用シーン
-プロテインを購入する。<br>
-トレーニング方法を調べる。<br>
+## おねがいプロテインについて
+#### \ 主な機能 /
+.プロテイン購入
+・トレーニングのメモ
+・管理者機能（注文管理、商品登録など）
+
+
+#### \ なんでおねがいプロテインを作ったの？ /
+本格的にトレーニングをする際に、筋トレ内容をメモする事が、効率よくトレーニングをする上で必要となります。
+
+既存のアプリでは有料のアプリや無料であっても、広告がついてくるアプリがほとんどです。
+
+メモアプリの無料運用を考えた際に商品を同時に販売する事で、プロテイン販売からの収益が見込まれ、
+
+広告の無い、メモアプリの無料運用が行えます。メモアプリを活用する利用者からのプロテイン販売サイトへの
+
+集客も想定しています。「トレーニングを始めるなら、おねがいプロテイン！」をコンセプトにブランディングを行い、
+
+トレーニングの誰もがこのアプリを愛してくれる事をイメージして作りました。
 
 <br>
-
-- - - -
 <br>
 
-### 設計書
-WBSシート
-https://docs.google.com/spreadsheets/d/1L_ZzH5r55u3-YA2k2iVB8DotKL8Ps536pMqUq8nu9Ig/edit#gid=1773513600
-- - - -
+## Screenshot!
+GIF画像を掲載します。  
+実際のサイトは[こちらからご覧ください。](http://onegai-protein.com/)  
+
+
+
+![GIF](https://user-images.githubusercontent.com/68215378/99869111-d3867980-2c0b-11eb-9ed3-9373225ba6b3.gif)
+
+
+## 技術面
+### 使用言語 / 環境等
+-  RubyonRails(5.2.4)
+-  Ruby(2.5.7)
+-  javascript
+-  jQuery
+
+#### \ 特にお世話になったgem や ライブラリ /
+- RSpec(テスト)
+- simpulCalender(カレンダー表示)
+- kaminari(ページネーション)
+- devise(ログイン機能)
+- bootstrap-sass(レイアウト)
+- rails-i18n(日本語化)
+
+
+### デプロイ環境
+![img](https://user-images.githubusercontent.com/68215378/99903302-e2058b80-2d06-11eb-9721-3951642de295.jpg)
+- AWS(EC2,ElasticIP,RDS,Route53,S3,IAM)
+- puma
+- nginx
+- capistrano
+
+
+## 設計関連
+
+
+### インフラ設計書
+  現行最新版。データベースに関しては不明点があれば、こちらをご覧ください。  
+[Googleドキュメントに移動します](https://docs.google.com/spreadsheets/d/15Jf1pC6NKWgO1sFKZwyCGiezY4A0FLnn9w2us-olwDc/edit?usp=sharing)
+
+
+### テーブル定義所
+  現行最新版。使用したテーブル詳細を表記してあります。  
+[Googleドキュメントに移動します](https://docs.google.com/spreadsheets/d/1tnSmZZPBBJMnbuEx6ktwqgmKfi7ogeOx/edit#gid=1324755598)
+
 
 ### 機能一覧
-https://docs.google.com/spreadsheets/d/1utE0TERuU0QG-gAe4PpS3KcPTXgFzHBL-wEJHkGpQco/edit#gid=0
+  使用技術や機能について。特筆すべきものを細かく記しています。   
+[Googleドキュメントに移動します](https://docs.google.com/spreadsheets/d/1utE0TERuU0QG-gAe4PpS3KcPTXgFzHBL-wEJHkGpQco/edit?usp=sharing)
 
-<br>
 
-- - - -
-<br>
+### 参考までに
+  WBSです。初めての自己開発でしたが、計画的に行うことができました。  
+[Googleドキュメントに移動します](https://docs.google.com/spreadsheets/d/1L_ZzH5r55u3-YA2k2iVB8DotKL8Ps536pMqUq8nu9Ig/edit?usp=sharing)
 
-### 開発環境
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
-- フレームワーク：Ruby on Rails
-- JSライブラリ：jQuery
-- 仮想環境：Vagrant,VirtualBox
-
-<br>
-
-- - - -
-<br>
-
-=======
-
-### ターゲットユーザ
-プロテインを購入したい人<br>
-もっと体を鍛えたい人<br>
-ダイエットしたい人<br>

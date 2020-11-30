@@ -26,7 +26,7 @@
         </tr>
         <tr>
           <td><%= f.label :postal_code, "郵便番号(ハイフンなし7桁)" %></td>
-          <td colspan="2"><%= f.text_field :postal_code, :placeholder =>"5420076", class: "jpostal_code" %></td>
+          <td colspan="2"><%= f.text_field :postal_code, class: "jpostal_code" %></td>
         </tr>
         <tr>
           <td><%= f.label :address, "住所" %></td>
@@ -34,7 +34,7 @@
         </tr>
         <tr>
           <td><%= f.label :telephone_number, "電話番号(ハイフンなし10or11桁)" %></td>
-          <td colspan="2"><%= f.text_field :telephone_number, :placeholder =>"00011112222" %></td>
+          <td colspan="2"><%= f.text_field :telephone_number %></td>
         </tr>
         <tr>
           <td><%= f.label :password, "パスワード(#{@minimum_password_length}文字以上)" %></td>
