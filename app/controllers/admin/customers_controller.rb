@@ -9,6 +9,12 @@ class Admin::CustomersController < ApplicationController
     end
   end
 
+  def check_guest
+    if @customer.email == 'guestcustomer@example.com'
+      redirect_to root_path, notice: 'ゲストユーザーは編集できません。'
+    end
+  end
+
   def index
     @customers = Customer.page(params[:page])
   end
