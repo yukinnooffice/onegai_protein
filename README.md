@@ -75,7 +75,7 @@ GIF画像を掲載します。
   現行最新版。データベースに関しては不明点があれば、こちらをご覧ください。  
 [Googleドキュメントに移動します](https://docs.google.com/spreadsheets/d/15Jf1pC6NKWgO1sFKZwyCGiezY4A0FLnn9w2us-olwDc/edit?usp=sharing)
 
-
+ 
 ### テーブル定義所
   現行最新版。使用したテーブル詳細を表記してあります。  
 [Googleドキュメントに移動します](https://docs.google.com/spreadsheets/d/1tnSmZZPBBJMnbuEx6ktwqgmKfi7ogeOx/edit#gid=1324755598)
