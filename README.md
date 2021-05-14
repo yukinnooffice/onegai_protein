@@ -89,4 +89,4 @@ GIF画像を掲載します。
 ### 参考までに　
   WBSです。初めての自己開発でしたが、計画的に行うことができました。  
 [Googleドキュメントに移動します](https://docs.google.com/spreadsheets/d/1L_ZzH5r55u3-YA2k2iVB8DotKL8Ps536pMqUq8nu9Ig/edit?usp=sharing)
-
+ 
